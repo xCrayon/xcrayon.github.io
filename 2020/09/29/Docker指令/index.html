@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | xCrayon Land</title>
+  <title>Docker的安装与用法 | xCrayon Land</title>
 
   
 
@@ -98,15 +98,15 @@
       <div class="post-image" style="background-image: url(http://s.xcrayon.cn/images/tech_girl.jpg)"></div>
       <div class="post-text">
         <div class="type-wrap">
-          
+          <a class="article-category-link" href="/categories/Linux/">Linux</a>
         </div>
-        <h1 class="title-wrap">Hello World</h1>
+        <h1 class="title-wrap">Docker的安装与用法</h1>
         <h2 class="title-sub-wrap">
           <strong>xCrayon</strong>
           <span>发布于</span>
           
   <a href="javascript:;" class="article-date">
-    <time datetime="2020-10-24T10:57:29.788Z" itemprop="datePublished">2020-10-24</time>
+    <time datetime="2020-09-29T13:46:31.033Z" itemprop="datePublished">2020-09-29</time>
   </a>
 
         </h2>
@@ -130,24 +130,65 @@
       
 
       <section class="article-entry">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="Docker指令"><a href="#Docker指令" class="headerlink" title="Docker指令"></a>Docker指令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt intall docker.io</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>docker version</p>
+</li>
+<li><p>docker search 镜像名</p>
+</li>
+<li><p>docker pull 镜像全名</p>
+</li>
+<li><p>docker images 查看所有本地镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu64:&#x2F;home&#x2F;crayon# docker images</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">redis               latest              84c5f6e03bf0        2 weeks ago         104MB</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>docker run 启动镜像</p>
+<p><strong>同步运行镜像</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name redis1 redis</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>​      ctrll+C退出，且映射端口</p>
+<p>​       <strong>后台运行，且映射端口</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; docker run -dit --name redis1 -p 6377:6379 redis</span><br><span class="line">&gt; ee5cf25eaefd8e227962779eaeb298fcde5d7c299a7b65017e524f4a68a63eaa</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>​       **查看容器进程  **</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; docker ps -a    </span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu64:&#x2F;home&#x2F;crayon# docker ps -a</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                    NAMES</span><br><span class="line">ee5cf25eaefd        redis               &quot;docker-entrypoint.s…&quot;   About a minute ago   Up About a minute   0.0.0.0:6377-&gt;6379&#x2F;tcp   redis1</span><br></pre></td></tr></table></figure>
+
+<p>​       **删除容器  **</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm redis1</span><br></pre></td></tr></table></figure>
+
+<p>​       **停止容器进程  **</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop reids1</span><br></pre></td></tr></table></figure>
+
+<p>​       **启动容器进程  **</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start redis1</span><br></pre></td></tr></table></figure>
+
+<p>​       **删除镜像  **</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi 镜像名或镜像id</span><br></pre></td></tr></table></figure>
+
+<p>​       **进入容器  **</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> redis1 1s</span><br></pre></td></tr></table></figure>
+
+<p>以上只执行redis1容器的命令，查看当前容器的工作目录下的文件，可以使用-it进入容器内部</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it redis1 &#x2F;bin&#x2F;sh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>生成镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导出导入镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker save -o ~&#x2F;project.tar project</span><br><span class="line"></span><br><span class="line">docker load --input ~&#x2F;tag.tar</span><br><span class="line">docker load &lt; ~&#x2F;tag.tar</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 
       </section>
 
       <section class="article-footer">
-        
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">#Docker</a></li></ul>
       </section>
 
       <section class="article-navs">
@@ -155,15 +196,28 @@
 <nav class="card-container card-article-nav">
   <div class="card-wrap">
     
+      <div id="article-nav-newer" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/19/%E5%85%B3%E4%BA%8EXPATH/"></a>
+          <strong class="article-nav-caption">Newer</strong>
+          <p class="article-nav-title">
+            
+              关于XPATH
+            
+          </p>
+        </article>
+      </div>
+    
     
       <div id="article-nav-older" class="card-item">
         <article>
           
-          <a class="card-link article-nav-link" href="/2020/10/22/scrapy/"></a>
+          <a class="card-link article-nav-link" href="/2020/09/29/Linux%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/"></a>
           <strong class="article-nav-caption">Older</strong>
           <p class="article-nav-title">
             
-              Scrapy的安装与使用
+              Git项目初始化
             
           </p>
         </article>

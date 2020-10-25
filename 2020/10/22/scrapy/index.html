@@ -22,7 +22,7 @@
 
   
 
-  <title>about | xCrayon Land</title>
+  <title>Scrapy的安装与使用 | xCrayon Land</title>
 
   
 
@@ -78,10 +78,7 @@
 
     
 <!-- header container -->
-<header class="header-container">
-
-  
-  
+<header class="header-container post">
 
   
   
@@ -100,44 +97,139 @@
     <div class="header-content">
       <div class="post-image" style="background-image: url(http://s.xcrayon.cn/images/tech_girl.jpg)"></div>
       <div class="post-text">
-        <h1 class="title-wrap">about</h1>
-        
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/Scrapy/">Scrapy</a>
+        </div>
+        <h1 class="title-wrap">Scrapy的安装与使用</h1>
+        <h2 class="title-sub-wrap">
+          <strong>xCrayon</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-10-22T07:41:43.958Z" itemprop="datePublished">2020-10-22</time>
+  </a>
+
+        </h2>
       </div>
     </div>
   
 
+  
+  
+
   </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
+<!-- 文章内容 -->
 
 <div class="body-container">
-  
-  
   <article class="content-container article-container">
     <div class="article-content">
-      <div class="article-entry"><p>i am crayon</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code test</span><br></pre></td></tr></table></figure>
+      
+      
 
-</div>
+      <section class="article-entry">
+        <h1 id="SCRAPY"><a href="#SCRAPY" class="headerlink" title="SCRAPY"></a>SCRAPY</h1><h2 id="scrapy的安装"><a href="#scrapy的安装" class="headerlink" title="scrapy的安装"></a>scrapy的安装</h2><p>scrapy的底层依赖于lxml, twisted, openssl, 涉及到系统C库，所以有可能会导致安装失败。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install scrapy</span><br><span class="line">apt install python3-scrapy</span><br></pre></td></tr></table></figure>
+
+<h2 id="scrapy的命令"><a href="#scrapy的命令" class="headerlink" title="scrapy的命令"></a>scrapy的命令</h2><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject qianmu</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成spider文件"><a href="#生成spider文件" class="headerlink" title="生成spider文件"></a>生成spider文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scrapy genspider [爬虫名字] [目标网站域名]</span></span><br><span class="line">scrapy genspider usnews www.qianmu.org</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行爬虫"><a href="#运行爬虫" class="headerlink" title="运行爬虫"></a>运行爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 运行名为usnews的爬虫</span></span><br><span class="line">scrapy crawl usnews</span><br><span class="line"><span class="comment"># 将爬到的数据导出为json文件</span></span><br><span class="line">scrapy crawl usnews -o usnews.json</span><br><span class="line"><span class="comment"># 导出为csv文件</span></span><br><span class="line">scrapy crawl usnews -o usnews.csv -t csv</span><br><span class="line"><span class="comment"># 单独运行爬虫文件</span></span><br><span class="line">scrapy runspider usnews.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="调试爬虫"><a href="#调试爬虫" class="headerlink" title="调试爬虫"></a>调试爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入到scrapy控制台，使用的是项目的环境</span></span><br><span class="line">scrapy shell</span><br><span class="line"><span class="comment"># 带一个URL参数，将会自动请求这个url，并在请求成功后进入控制台</span></span><br><span class="line">scrapy shell http://url.com</span><br><span class="line"><span class="comment"># 用项目配置下载网页，然后用浏览器打开网页, 然后输出再输出在控制台上</span></span><br><span class="line">scrapy view [url]</span><br></pre></td></tr></table></figure>
+
+<p>进入到控制台以后，可以使用以下函数和对象</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fetch</td>
+<td>请求url或者Request对象，注意：请求成功以后会自动将当前作用域内的request和response对象重新赋值</td>
+</tr>
+<tr>
+<td>view</td>
+<td>用浏览器打开response对象内的网页</td>
+</tr>
+<tr>
+<td>shelp</td>
+<td>打印帮助信息</td>
+</tr>
+<tr>
+<td>spider</td>
+<td>相应的Spider类的实例</td>
+</tr>
+<tr>
+<td>settings</td>
+<td>保存所有配置信息的settings对象</td>
+</tr>
+<tr>
+<td>crawler</td>
+<td>当前Crawl对象</td>
+</tr>
+</tbody></table>
+
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scrapy/" rel="tag">#Scrapy</a></li></ul>
+      </section>
+
+      <section class="article-navs">
+        
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div id="article-nav-newer" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/24/hello-world/"></a>
+          <strong class="article-nav-caption">Newer</strong>
+          <p class="article-nav-title">
+            
+              Hello World
+            
+          </p>
+        </article>
+      </div>
+    
+    
+      <div id="article-nav-older" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/22/WGET%20%20CURL%E6%8C%87%E4%BB%A4/"></a>
+          <strong class="article-nav-caption">Older</strong>
+          <p class="article-nav-title">
+            
+              WGET与CURL指令
+            
+          </p>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+      </section>
+
+      
+
+  
+  
+
+  
+  
+
+
     </div>
   </article>
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">

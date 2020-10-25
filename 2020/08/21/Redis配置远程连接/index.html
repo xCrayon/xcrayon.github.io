@@ -22,7 +22,7 @@
 
   
 
-  <title>Archives | xCrayon Land</title>
+  <title>Redis配置远程连接 | xCrayon Land</title>
 
   
 
@@ -78,7 +78,16 @@
 
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
+
+  
+  
+
+  
+  
+
+  
+  
 
   
   
@@ -88,19 +97,21 @@
     <div class="header-content">
       <div class="post-image" style="background-image: url(http://s.xcrayon.cn/images/tech_girl.jpg)"></div>
       <div class="post-text">
-        <h1 class="title-wrap">归档</h1>
-        <h2 class="title-sub-wrap">共有7篇文章</h2>
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/Redis/">Redis</a>
+        </div>
+        <h1 class="title-wrap">Redis配置远程连接</h1>
+        <h2 class="title-sub-wrap">
+          <strong>xCrayon</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-08-20T17:04:07.827Z" itemprop="datePublished">2020-08-21</time>
+  </a>
+
+        </h2>
       </div>
     </div>
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -108,114 +119,85 @@
 
   </header>
 
-    <!-- 归档 -->
+    <!-- 文章 -->
 
-<!-- post list container -->
-<div class="body-container float">
-  <div class="content-container article-list">
-    <div class="card-container card-articles">
-      <div class="card-wrap">
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article class="content-container article-container">
+    <div class="article-content">
+      
+      
+
+      <section class="article-entry">
+        <h1 id="Redis配置远程连接"><a href="#Redis配置远程连接" class="headerlink" title="Redis配置远程连接"></a>Redis配置远程连接</h1><p>首先使用vim访问redis的配置文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim &#x2F;usr&#x2F;local&#x2F;etc&#x2F;redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>在vim的命令模式下搜索 bind （ : / bind ），或者直接使用如下代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim &#x2F;usr&#x2F;local&#x2F;etc&#x2F;redis.conf +69</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\Files\Pictures\redis_01.jpg" alt="redis_01"></p>
+<p>然后将第69行的 bind 127.0.0.1 注释掉。</p>
+<p>同理转到第88行 将 protected-mode 的 yes 改为 no。</p>
+<p><img src="D:\Files\Pictures\redis_02.jpg" alt="redis_02"></p>
+<p>接下来转到786行或检索requirepass，将其注释取消并在后面空一格设置自己的密码。</p>
+<p><img src="D:\Files\Pictures\redis_03.jpg" alt="redis_03"></p>
+<p>最后重启redis服务，查看进程测试是否修改成功，如果显示有 *：6379则设置成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ps -ef | grep redis</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\Files\Pictures\redis_04.jpg" alt="redis_04"></p>
+<p>现在可使用命令进入相应云服务器ip地址绑定后的redis</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h [ip地址] -p 6379</span><br></pre></td></tr></table></figure>
+
+<p>进入redis后使用如下命令进行授权</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth [在redis.conf设置的password]</span><br></pre></td></tr></table></figure>
+
+<p>此外，在python中redis的连接如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> redis <span class="keyword">import</span> Redis</span><br><span class="line"></span><br><span class="line">rd = Redis(host=<span class="string">&#x27;ip地址&#x27;</span>,</span><br><span class="line">           password=<span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">           db=库名,</span><br><span class="line">           decode_responses=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis/" rel="tag">#Redis</a></li></ul>
+      </section>
+
+      <section class="article-navs">
         
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div id="article-nav-newer" class="card-item">
+        <article>
           
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/24/hello-world/" itemprop="url"></a>
-              
-              <h2 class="article-title">Hello World</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/24/hello-world/" class="article-date">
-    <time datetime="2020-10-24T10:57:29.788Z" itemprop="datePublished">2020-10-24</time>
-  </a>
-
-              </div>
-              <div class="article-category">
-                
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/22/scrapy/" itemprop="url"></a>
-              
-              <h2 class="article-title">Scrapy的安装与使用</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/22/scrapy/" class="article-date">
-    <time datetime="2020-10-22T07:41:43.958Z" itemprop="datePublished">2020-10-22</time>
-  </a>
-
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Scrapy/">Scrapy</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/22/WGET%20%20CURL%E6%8C%87%E4%BB%A4/" itemprop="url"></a>
-              
-              <h2 class="article-title">WGET与CURL指令</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/22/WGET%20%20CURL%E6%8C%87%E4%BB%A4/" class="article-date">
-    <time datetime="2020-10-22T07:40:51.577Z" itemprop="datePublished">2020-10-22</time>
-  </a>
-
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Python/">Python</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/19/%E5%85%B3%E4%BA%8EXPATH/" itemprop="url"></a>
-              
-              <h2 class="article-title">关于XPATH</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/19/%E5%85%B3%E4%BA%8EXPATH/" class="article-date">
-    <time datetime="2020-10-19T14:17:44.168Z" itemprop="datePublished">2020-10-19</time>
-  </a>
-
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Python/">Python</a>
-              </div>
-            </article>
-          </div>
-        
+          <a class="card-link article-nav-link" href="/2020/09/29/Linux%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/"></a>
+          <strong class="article-nav-caption">Newer</strong>
+          <p class="article-nav-title">
+            
+              Git项目初始化
+            
+          </p>
+        </article>
       </div>
-    </div>
+    
+    
   </div>
+</nav>
+
+      </section>
+
+      
+
+  
+  
+
+  
+  
+
+
+    </div>
+  </article>
 </div>
-
-<!-- page container -->
-
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
