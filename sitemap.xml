@@ -2,6 +2,13 @@
 <urlset xmlns="http://xcrayon.cn">
   
   <url>
+    <loc>http://xcrayon.cn/2020/10/28/Git%20Push%E6%8A%A5%E9%94%99/</loc>
+    
+    <lastmod>2020-10-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xcrayon.cn/2020/10/28/mangodb%E7%94%A8%E6%B3%95/</loc>
     
     <lastmod>2020-10-27</lastmod>
@@ -137,14 +144,14 @@
 
   
   <url>
-    <loc>http://xcrayon.cn/tags/Docker/</loc>
+    <loc>http://xcrayon.cn/tags/Git/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/Git/</loc>
+    <loc>http://xcrayon.cn/tags/Docker/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -165,14 +172,14 @@
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/Python/</loc>
+    <loc>http://xcrayon.cn/tags/mangoDB/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/mangoDB/</loc>
+    <loc>http://xcrayon.cn/tags/Python/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -209,14 +216,14 @@
 
   
   <url>
-    <loc>http://xcrayon.cn/categories/Linux/</loc>
+    <loc>http://xcrayon.cn/categories/Git/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/categories/Git/</loc>
+    <loc>http://xcrayon.cn/categories/Linux/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -230,14 +237,14 @@
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/categories/Python/</loc>
+    <loc>http://xcrayon.cn/categories/mangoDB/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/categories/mangoDB/</loc>
+    <loc>http://xcrayon.cn/categories/Python/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
