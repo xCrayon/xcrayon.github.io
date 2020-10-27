@@ -20,7 +20,7 @@
 
   
 
-  <title>音乐 | xCrayon</title>
+  <title>mangoDB指令笔记 | xCrayon</title>
 
   
 
@@ -82,10 +82,7 @@
 
     
 <!-- header container -->
-<header class="header-container">
-
-  
-  
+<header class="header-container post">
 
   
   
@@ -104,51 +101,124 @@
     <div class="header-content">
       <div class="post-image" style="background-image: url(http://www.dmoe.cc/random.php)"></div>
       <div class="post-text">
-        <h1 class="title-wrap">音乐</h1>
-        
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/mangoDB/">mangoDB</a>
+        </div>
+        <h1 class="title-wrap">mangoDB指令笔记</h1>
+        <h2 class="title-sub-wrap">
+          <strong>xCrayon</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-10-27T17:44:59.873Z" itemprop="datePublished">2020-10-28</time>
+  </a>
+
+        </h2>
       </div>
     </div>
   
 
+  
+  
+
   </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
+<!-- 文章内容 -->
 
 <div class="body-container">
-  
-  
   <article class="content-container article-container">
     <div class="article-content">
-      <div class="article-entry"><!-- require APlayer -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+      
+      
 
-<p><meting-js
-    server="netease"
-    type="playlist"
-    id="3026825782"><br></meting-js></p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css"></div>
+      <section class="article-entry">
+        
+    <figure class="bookmark-card">
+      <a class="bookmark-container" target="_blank" title="mangoDB思维导图" href="https://www.edrawsoft.cn/viewer/public/s/30428889066212">
+        <div class="bookmark-content">
+          <div class="bookmark-name">mangoDB思维导图</div>
+          <div class="bookmark-link">https://www.edrawsoft.cn/viewer/public/s/30428889066212</div>
+        </div>
+        
+      <div class="bookmark-cover">
+        <img src="http://www.dmoe.cc/random.php" alt="mangoDB思维导图" />
+      </div>
+    
+      </a>
+    </figure>
+  
+
+<h1 id="mangodb"><a href="#mangodb" class="headerlink" title="mangodb"></a>mangodb</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="yum-install-mongodb-server-安装服务器-yum-install-mangodb-安装客户端"><a href="#yum-install-mongodb-server-安装服务器-yum-install-mangodb-安装客户端" class="headerlink" title="yum install mongodb-server  # 安装服务器  yum install mangodb  # 安装客户端"></a>yum install mongodb-server  # 安装服务器  yum install mangodb  # 安装客户端</h3><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><h3 id="mongod-f-etc-mongod-conf-启动服务器-mongo-启动客户端"><a href="#mongod-f-etc-mongod-conf-启动服务器-mongo-启动客户端" class="headerlink" title="mongod -f /etc/mongod.conf  # 启动服务器  mongo  # 启动客户端"></a>mongod -f /etc/mongod.conf  # 启动服务器  mongo  # 启动客户端</h3><h2 id="常见指令"><a href="#常见指令" class="headerlink" title="常见指令"></a>常见指令</h2><h3 id="结构指令"><a href="#结构指令" class="headerlink" title="结构指令"></a>结构指令</h3><ul>
+<li>show databases;  # 显示所有数据库</li>
+<li>use python201;  # 切换数据库，如果数据库不存在，创建数据库</li>
+<li>db.dropDatabase();  # 删除当前数据库</li>
+<li>db.createColooection(‘student’)  # 创建了一个student表</li>
+<li>show collections;  # 显示所有的表格</li>
+<li>db.student.drop();  # 删除一个表格</li>
+</ul>
+<h3 id="数据指令"><a href="#数据指令" class="headerlink" title="数据指令"></a>数据指令</h3><ul>
+<li>db.student.insert ( { ‘name’ : ‘jack’ , ‘age’ : 18 } )   # 往student表里插入一条数据</li>
+<li>db.student.find();  # 查找student表里的所有数据</li>
+<li>db.student.update( { ‘name’: ‘jack’ } , { ‘name’ : ‘rose’ } )   <h1 id="将name-jack改成name-rose"><a href="#将name-jack改成name-rose" class="headerlink" title="将name=jack改成name=rose"></a>将name=jack改成name=rose</h1></li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mangoDB/" rel="tag">#mangoDB</a></li></ul>
+      </section>
+
+      <section class="article-navs">
+        
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div id="article-nav-newer" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/28/shell%E7%BC%96%E7%A8%8B/"></a>
+          <strong class="article-nav-caption">Newer</strong>
+          <p class="article-nav-title">
+            
+              shell编程
+            
+          </p>
+        </article>
+      </div>
+    
+    
+      <div id="article-nav-older" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/28/mysql%E6%8C%87%E4%BB%A4/"></a>
+          <strong class="article-nav-caption">Older</strong>
+          <p class="article-nav-title">
+            
+              MySQL指令笔记
+            
+          </p>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+      </section>
+
+      
+
+  
+  
+
+  
+  
+
+
     </div>
   </article>
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+
+  
+
+  
+
+  
+    <meta name="author" content="xCrayon">
+  
+
+  
+
+  
+
+  <title>Linux指令笔记 | xCrayon</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/default.min.css" rel="stylesheet">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+  <div class="root-container">
+    <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          xCrayon
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">HOME</a></li>
+        
+          <li class="navbar-list-item"><a href="/archives">ARCHIVE</a></li>
+        
+          <li class="navbar-list-item"><a href="/categories">CATEGORY</a></li>
+        
+          <li class="navbar-list-item"><a href="/tags">TAG</a></li>
+        
+          <li class="navbar-list-item"><a href="/music">MUSIC</a></li>
+        
+          <li class="navbar-list-item"><a href="/photo">PHOTO</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">ABOUT</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">LINK</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    
+<!-- header container -->
+<header class="header-container post">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-image" style="background-image: url(http://www.dmoe.cc/random.php)"></div>
+      <div class="post-text">
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/Linux/">Linux</a>
+        </div>
+        <h1 class="title-wrap">Linux指令笔记</h1>
+        <h2 class="title-sub-wrap">
+          <strong>xCrayon</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-10-27T16:12:25.823Z" itemprop="datePublished">2020-10-28</time>
+  </a>
+
+        </h2>
+      </div>
+    </div>
+  
+
+  
+  
+
+  </header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article class="content-container article-container">
+    <div class="article-content">
+      
+      
+
+      <section class="article-entry">
+        
+    <figure class="bookmark-card">
+      <a class="bookmark-container" target="_blank" title="Linux指令思维导图" href="https://www.edrawsoft.cn/viewer/public/s/9644a537674053">
+        <div class="bookmark-content">
+          <div class="bookmark-name">Linux指令思维导图</div>
+          <div class="bookmark-link">https://www.edrawsoft.cn/viewer/public/s/9644a537674053</div>
+        </div>
+        
+      <div class="bookmark-cover">
+        <img src="http://www.dmoe.cc/random.php" alt="Linux指令思维导图" />
+      </div>
+    
+      </a>
+    </figure>
+  
+
+<h1 id="Linux指令"><a href="#Linux指令" class="headerlink" title="Linux指令"></a>Linux指令</h1><h2 id="命令的格式"><a href="#命令的格式" class="headerlink" title="命令的格式"></a>命令的格式</h2><h3 id="命令-选项-参数-ls-a-home"><a href="#命令-选项-参数-ls-a-home" class="headerlink" title="命令 选项 参数   ls  -a /home"></a>命令 选项 参数   ls  -a /home</h3><h2 id="软件管理相关命令"><a href="#软件管理相关命令" class="headerlink" title="软件管理相关命令"></a>软件管理相关命令</h2><h3 id="Debian平台，代表作ubuntu"><a href="#Debian平台，代表作ubuntu" class="headerlink" title="Debian平台，代表作ubuntu"></a>Debian平台，代表作ubuntu</h3><ul>
+<li>dpkg</li>
+<li>apt</li>
+<li>.deb：基于Debian平台的软件安装白</li>
+</ul>
+<h3 id="Fedora平台，代表作centos"><a href="#Fedora平台，代表作centos" class="headerlink" title="Fedora平台，代表作centos"></a>Fedora平台，代表作centos</h3><ul>
+<li>rpm：用来安装离线安装包，不会自动安装依赖</li>
+<li>yum：可以离线或者在线安装软件，并且会自动安装依赖</li>
+<li>.rpm：基于Fedora平台的软件安装包</li>
+</ul>
+<h3 id="安装软件的三种方式"><a href="#安装软件的三种方式" class="headerlink" title="安装软件的三种方式"></a>安装软件的三种方式</h3><ul>
+<li><p>1.下载离线安装包</p>
+<ul>
+<li>dpkg/rpm</li>
+</ul>
+</li>
+<li><p>2.直接在线安装</p>
+<ul>
+<li>apt/yum</li>
+</ul>
+</li>
+<li><p>3.把代码的源代码下载下来，然后编译安装。下载.tgz源代码文件，是一个压缩包，相当于windows里的 zip / rar</p>
+<ul>
+<li><p>1.从官网上下载源代码(一般都是C语言的源代码)</p>
+</li>
+<li><ol start="2">
+<li>tar -zxvf &lt;文件名&gt; 解压源代码，进入文件夹</li>
+</ol>
+</li>
+<li><p>3.执行 ./cinfigure –prefix==url 进行配置</p>
+<ul>
+<li>–prefix是用来指定安装路径</li>
+<li>配置的目的是查看当前系统的环境是否能够安装软件，在此过程中可能出现错误提示，需要安装第三方的依赖包</li>
+<li>在此过程中，会提示需要安装第三方依赖包，此时需要手动的运行命令安装依赖</li>
+<li>以来安装完成以后，再次执行 ./configure –prefix==url</li>
+</ul>
+</li>
+<li><p>4.configure命令执行成功以后，会生成一个新的Makefile文件</p>
+</li>
+<li><p>5.执行命令进行编译安装 sudo make &amp;&amp; sudo make install</p>
+</li>
+<li><p>6.启动nginx</p>
+<ul>
+<li>cd /usr/local/nginx/sbin目录</li>
+<li>执行 nginx 文件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="CentOS软件安装相关的命令"><a href="#CentOS软件安装相关的命令" class="headerlink" title="CentOS软件安装相关的命令"></a>CentOS软件安装相关的命令</h3><ul>
+<li><p>rpm</p>
+<ul>
+<li><p>rpm ivh &lt;包名.rpm&gt; </p>
+<ul>
+<li> 不会自动安装依赖，一般会失败</li>
+</ul>
+</li>
+<li><p>rpm -qa  列出安装的所有包</p>
+</li>
+<li><p>rpm -e &lt;包名&gt; 删除指定的包</p>
+<ul>
+<li>一般也不会卸载成功，不会自动删除依赖</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>yum</p>
+<ul>
+<li>yum install &lt;包名.rpm&gt;</li>
+<li>yum list installed 列出已经安装的软件</li>
+<li>yum remove 移除指定的软件</li>
+<li>yum check-update 显示可用的更新</li>
+<li>yum update &lt;软件名&gt; 用来更新指定的软件</li>
+</ul>
+</li>
+</ul>
+<h2 id="文件-夹-操作相关命令"><a href="#文件-夹-操作相关命令" class="headerlink" title="文件(夹)操作相关命令"></a>文件(夹)操作相关命令</h2><h3 id="Linux里的目录结构"><a href="#Linux里的目录结构" class="headerlink" title="Linux里的目录结构"></a>Linux里的目录结构</h3><ul>
+<li>根目录：/</li>
+<li>bin：存放的是二进制文件，都是一些可执行命名</li>
+<li>etc：用来存储配置信息，重要，我们会修改</li>
+<li>home：用来存放用户的家目录。创建一个用户时，会在这里创建一个和用户同名的文件夹，用来存放用户的信息</li>
+<li>root：root用户的家目录</li>
+<li>sbin：超级用户命令存放的目录</li>
+<li>usr：非常重要的目录，用来存放用户安装的应用程序和用户文件</li>
+</ul>
+<h3 id="cd命令：用来进入指定的文件夹"><a href="#cd命令：用来进入指定的文件夹" class="headerlink" title="cd命令：用来进入指定的文件夹"></a>cd命令：用来进入指定的文件夹</h3><ul>
+<li>cd：等价于 cd~，进入到当前用户的家目录</li>
+<li>cd ~：进入到当前用户的家目录</li>
+<li>cd ../：进入到上级目录</li>
+<li>cd -：进入到上一次的目录</li>
+<li>cd /：进入到根目录</li>
+<li>以 ./ 或者 ../ 或者没有斜杠开始的路径，是相对路径</li>
+<li>以 / 开始的是绝对路径</li>
+</ul>
+<h3 id="pwd命令：用来查看当前所在的目录"><a href="#pwd命令：用来查看当前所在的目录" class="headerlink" title="pwd命令：用来查看当前所在的目录"></a>pwd命令：用来查看当前所在的目录</h3><h3 id="ls：列出指定目录里的文件-夹"><a href="#ls：列出指定目录里的文件-夹" class="headerlink" title="ls：列出指定目录里的文件(夹)"></a>ls：列出指定目录里的文件(夹)</h3><ul>
+<li><p>默认不显示隐藏的文件和文件夹</p>
+</li>
+<li><p>选项</p>
+<ul>
+<li><p>-a：用来显示所有的文件(夹)，包括隐藏的</p>
+</li>
+<li><p>-l：用来显示文件(夹)的详细信息 drwxrwxr-x 2 chris chris 4096 7月 28 20:39 ddd</p>
+<ul>
+<li><p>drwxrwx-x</p>
+<ul>
+<li><p>第一个字母表示文件的类型夹</p>
+<ul>
+<li>d：表示是个文件夹</li>
+<li>-：表示一个普通的文件</li>
+<li>l：表示一个链接(快捷方式)</li>
+</ul>
+</li>
+<li><p>rwxrwx-x</p>
+<ul>
+<li>表示权限，9个字母，3个一组，分别表示所有组，所属组和其他的权限</li>
+<li>r：读取</li>
+<li>w：写入</li>
+<li>x：可执行</li>
+<li>-：表示没有权限</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2</p>
+<ul>
+<li>如果是一个文件夹，表示这个文件夹里有几个子文件夹</li>
+<li>如果是个文件，用来表示文件硬链接的个数</li>
+</ul>
+</li>
+<li><p>chris：表示所有者</p>
+</li>
+<li><p>chris：表示所有者所属的组</p>
+</li>
+<li><p>4096</p>
+<ul>
+<li>文件夹显示的都是4096</li>
+<li>文件显示文件的大小</li>
+</ul>
+</li>
+<li><p>7月 28 20:39</p>
+<ul>
+<li>文件(夹)做最后一次修改时间</li>
+</ul>
+</li>
+<li><p>ddd</p>
+<ul>
+<li>文件(夹)的名字</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>-h：使用更加贴近人类识别的格式显示，以KMGT形式显示</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="mkdir：用来创建文件夹"><a href="#mkdir：用来创建文件夹" class="headerlink" title="mkdir：用来创建文件夹"></a>mkdir：用来创建文件夹</h3><ul>
+<li>-p：用来创建多级目录</li>
+</ul>
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch "></a>touch <filename></h3><ul>
+<li>用来创建空文件</li>
+</ul>
+<h3 id="rmdir：用来移除一个空文件夹"><a href="#rmdir：用来移除一个空文件夹" class="headerlink" title="rmdir：用来移除一个空文件夹"></a>rmdir：用来移除一个空文件夹</h3><h3 id="rm-rf：用来移除文件或者文件夹"><a href="#rm-rf：用来移除文件或者文件夹" class="headerlink" title="rm -rf：用来移除文件或者文件夹"></a>rm -rf：用来移除文件或者文件夹</h3><ul>
+<li>r：递归删除</li>
+<li>f：强制删除</li>
+</ul>
+<h3 id="cp：用来复制一个文件，cp-源文件-目标文件"><a href="#cp：用来复制一个文件，cp-源文件-目标文件" class="headerlink" title="cp：用来复制一个文件，cp 源文件 目标文件"></a>cp：用来复制一个文件，cp 源文件 目标文件</h3><h3 id="mv：用来移动一个文件-夹"><a href="#mv：用来移动一个文件-夹" class="headerlink" title="mv：用来移动一个文件(夹)"></a>mv：用来移动一个文件(夹)</h3><h3 id="查看文件相关的指令"><a href="#查看文件相关的指令" class="headerlink" title="查看文件相关的指令"></a>查看文件相关的指令</h3><ul>
+<li>cat：从上到下，查看所有的内容</li>
+<li>tac：从下到上，查看所有的内容</li>
+<li>head -n：查看前n行的内容，默认十行</li>
+<li>tail -n：查看后n行的内容，默认是十行</li>
+<li>wc：用来统计个数</li>
+<li>nl：带行号的显示所有内容</li>
+<li>more：用来显示一屏，空格用来翻屏，查看完毕以后，自动退出</li>
+<li>less：用来显示一屏，查看完毕以后，不会自动退出，需要出入q退出</li>
+</ul>
+<h2 id="vim的使用"><a href="#vim的使用" class="headerlink" title="vim的使用"></a>vim的使用</h2><h3 id="vim是一个文件编辑工具，相当于记事本"><a href="#vim是一个文件编辑工具，相当于记事本" class="headerlink" title="vim是一个文件编辑工具，相当于记事本"></a>vim是一个文件编辑工具，相当于记事本</h3><h3 id="vim-filename-使用vim打开一个文件用来编辑"><a href="#vim-filename-使用vim打开一个文件用来编辑" class="headerlink" title="vim filename 使用vim打开一个文件用来编辑"></a>vim filename 使用vim打开一个文件用来编辑</h3><h3 id="vim有三种模式"><a href="#vim有三种模式" class="headerlink" title="vim有三种模式"></a>vim有三种模式</h3><ul>
+<li><p>命令模式：默认是命令模式，只能接收命令，不能输入内容</p>
+<ul>
+<li>dd：用来删除一行数据，ndd用来删除n行数据</li>
+<li>u：撤销</li>
+<li>ctrl+r：反撤销</li>
+<li>yy：用来复制一行，nyy用来复制n行</li>
+<li>p：粘贴</li>
+<li>G：定位到最后一行</li>
+<li>gg：定位到第一行，ngg定位到第n行</li>
+<li>$：定位到行尾</li>
+<li>0 / ^：定位到行首</li>
+<li>x：删除光标右边的一个文字，nx表示删除光标右边的n个文字</li>
+<li>X：删除光标左边的一个文字，nX表示删除光标左边的n个文字</li>
+<li>shift + z + z：保存并退出</li>
+</ul>
+</li>
+<li><p>插入模式：在这个模式下才能够写入内容，想要退出，必须要按esc进入到命名模式才能退出</p>
+<ul>
+<li>i：进入到插入模式</li>
+<li>I：在第一个非空字符前面插入数据</li>
+<li>a：在光标的右侧插入数据</li>
+<li>A：在光标所在行的结尾插入数据</li>
+<li>s：删除光标所在位置的文字，并插入内容</li>
+<li>S：删除光标所在行的文字，并插入内容</li>
+<li>o：在光标所在行的下一行插入数据</li>
+<li>O：在光标所在行的上一行插入数据</li>
+</ul>
+</li>
+<li><p>底线命令模式：需要按esc键进入到命令模式，然后再按：进入到底线命令模式</p>
+<ul>
+<li><p>w：保存修改</p>
+</li>
+<li><p>q：退出</p>
+</li>
+<li><p>q！：不保存强制退出</p>
+</li>
+<li><p>wq：保存并退出</p>
+</li>
+<li><p>e！：放弃之前的修改</p>
+</li>
+<li><p>n：光标定位到din行</p>
+</li>
+<li><p>/[内容]：用来查找，n下一个匹配，N上一个匹配</p>
+</li>
+<li><p>%s/原内容/新内容</p>
+<ul>
+<li>默认只替换每一行第一次匹配到的数据，/g是全部替换</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="vim的配置文件"><a href="#vim的配置文件" class="headerlink" title="vim的配置文件"></a>vim的配置文件</h3><ul>
+<li>/etc/vimrc：所有用户都能读取到这个配置</li>
+<li>~/.vimrc：只有当前用户才能读取到这个配置</li>
+</ul>
+<h2 id="用户管理相关命令"><a href="#用户管理相关命令" class="headerlink" title="用户管理相关命令"></a>用户管理相关命令</h2><h3 id="whoami：查看当前登录的用户"><a href="#whoami：查看当前登录的用户" class="headerlink" title="whoami：查看当前登录的用户"></a>whoami：查看当前登录的用户</h3><h3 id="useradd-lt-用户名-gt-：用来新建一个用户"><a href="#useradd-lt-用户名-gt-：用来新建一个用户" class="headerlink" title="useradd &lt;用户名&gt;：用来新建一个用户"></a>useradd &lt;用户名&gt;：用来新建一个用户</h3><ul>
+<li>-m：创建用户的家目录，会在/home文件夹下建一个和用户同名的文件夹</li>
+<li>-d：指定用户的家目录，一般情况下不要制定</li>
+<li>-M：不创建家目录</li>
+<li>-s：指定用户登录时的shell解析脚本，一般指定 /bin/bash</li>
+</ul>
+<h3 id="userdel-lt-用户名-gt-：删除用户的指令"><a href="#userdel-lt-用户名-gt-：删除用户的指令" class="headerlink" title="userdel &lt;用户名&gt;：删除用户的指令"></a>userdel &lt;用户名&gt;：删除用户的指令</h3><ul>
+<li>-r：删除用户的同时，删除用户的家目录等信息</li>
+</ul>
+<h3 id="su-指定用户"><a href="#su-指定用户" class="headerlink" title="su 指定用户"></a>su 指定用户</h3><ul>
+<li>su chris：切换到chris用户，可能需要输入密码</li>
+<li>su 或者 su -：切换到 root 用户</li>
+</ul>
+<h3 id="passwd-用来设置密码"><a href="#passwd-用来设置密码" class="headerlink" title="passwd 用来设置密码"></a>passwd 用来设置密码</h3><ul>
+<li>passwd chris：用来给chris设置密码</li>
+<li>passwd：给当前用户设置密码</li>
+</ul>
+<h3 id="sudo：使用root用户的权限执行命令。chris不在sudoers文件中，此事将被报告。"><a href="#sudo：使用root用户的权限执行命令。chris不在sudoers文件中，此事将被报告。" class="headerlink" title="sudo：使用root用户的权限执行命令。chris不在sudoers文件中，此事将被报告。"></a>sudo：使用root用户的权限执行命令。chris不在sudoers文件中，此事将被报告。</h3><ul>
+<li><p>解决方案</p>
+<ul>
+<li><p>第一种：直接修改sudoers文件</p>
+<ul>
+<li>需要使用一个有root权限的用户把chris用户添加到 /etc/sudoers文件中。 vim /etc/sudoers</li>
+<li>Linux里有一个专门的命令，用来编辑<br>/etc/sudoers文件：visudo。但是打开的方式不是vim</li>
+</ul>
+</li>
+<li><p>第二种：将用户添加到有权限的组里</p>
+<ul>
+<li>Ubuntu：sodu组 / admin组</li>
+<li>CentOS：wheel组</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="用户组的概念"><a href="#用户组的概念" class="headerlink" title="用户组的概念"></a>用户组的概念</h3><ul>
+<li><p>当我们创建一个用户同时，会自动创建一个和它同名的分组</p>
+</li>
+<li><p>groups：查看用户所在的分组</p>
+<ul>
+<li>groups：查看当前用户所在的分组</li>
+<li>groups chris：查看chris用户所在的分组</li>
+</ul>
+</li>
+<li><p>gpasswd：用来将用户添加到一份分组，或者从一个分组里删除</p>
+<ul>
+<li>-a 用户名 &lt;组名&gt;：将用户添加到对应的分组</li>
+</ul>
+</li>
+</ul>
+<h3 id="用户和组相关的一些文件"><a href="#用户和组相关的一些文件" class="headerlink" title="用户和组相关的一些文件"></a>用户和组相关的一些文件</h3><ul>
+<li>/etc/passwd ==&gt; 列出了系统里所有的用户</li>
+<li>/etc/shadow ==&gt; 保存了用户的密码信息</li>
+<li>/etc/group</li>
+</ul>
+<h2 id="命名的别名"><a href="#命名的别名" class="headerlink" title="命名的别名"></a>命名的别名</h2><h3 id="alias可以给命令起别名"><a href="#alias可以给命令起别名" class="headerlink" title="alias可以给命令起别名"></a>alias可以给命令起别名</h3><h3 id="alias-la-’ls-a’"><a href="#alias-la-’ls-a’" class="headerlink" title="alias la=’ls -a’"></a>alias la=’ls -a’</h3><ul>
+<li>给ls -a命名起了一个别名la</li>
+<li>如果在控制台里直接输入，是临时的，终端关闭后，别名就没了</li>
+</ul>
+<h2 id="Linux里的配置文件介绍"><a href="#Linux里的配置文件介绍" class="headerlink" title="Linux里的配置文件介绍"></a>Linux里的配置文件介绍</h2><h3 id="etc-bashrc文件"><a href="#etc-bashrc文件" class="headerlink" title="/etc/bashrc文件"></a>/etc/bashrc文件</h3><ul>
+<li>把alias md=‘mkdir’命令写在了/etc/bashrc文件里，重新连接终端以后，依然可以使用命令。无论使用哪个用户登录，都会自动执行/etc/bashrc里的命令</li>
+</ul>
+<h3 id="bashrc文件"><a href="#bashrc文件" class="headerlink" title="~/.bashrc文件"></a>~/.bashrc文件</h3><ul>
+<li>只要当前用户登录时，才会执行这个里的命令</li>
+</ul>
+<h3 id="每次打开终端，都会自动执行配置文件里的代码"><a href="#每次打开终端，都会自动执行配置文件里的代码" class="headerlink" title="每次打开终端，都会自动执行配置文件里的代码"></a>每次打开终端，都会自动执行配置文件里的代码</h3><h2 id="文件-夹-权限管理"><a href="#文件-夹-权限管理" class="headerlink" title="文件(夹)权限管理"></a>文件(夹)权限管理</h2><h3 id="chmod：用来修改权限"><a href="#chmod：用来修改权限" class="headerlink" title="chmod：用来修改权限"></a>chmod：用来修改权限</h3><ul>
+<li><p>o：其他</p>
+<ul>
+<li>chmod o+w demo.txt：给demo.txt文件的其他的用户添加写入权限</li>
+</ul>
+</li>
+<li><p>u：所有者</p>
+<ul>
+<li>chmod u+x demo.txt</li>
+</ul>
+</li>
+<li><p>g：所属组</p>
+<ul>
+<li>chmod g-w demo.txt</li>
+</ul>
+</li>
+<li><p>a：全部</p>
+<ul>
+<li>chmod a-r demo.txt</li>
+</ul>
+</li>
+</ul>
+<h3 id="chgrp：用来修改文件的所有组"><a href="#chgrp：用来修改文件的所有组" class="headerlink" title="chgrp：用来修改文件的所有组"></a>chgrp：用来修改文件的所有组</h3><h3 id="chown：用来修改文件的所有者"><a href="#chown：用来修改文件的所有者" class="headerlink" title="chown：用来修改文件的所有者"></a>chown：用来修改文件的所有者</h3><h3 id="权限值"><a href="#权限值" class="headerlink" title="权限值"></a>权限值</h3><ul>
+<li>r    4</li>
+<li>w   2</li>
+<li>x    1</li>
+</ul>
+<h3 id="默认权限"><a href="#默认权限" class="headerlink" title="默认权限"></a>默认权限</h3><ul>
+<li>文件：664</li>
+<li>文件夹：775</li>
+<li>umask 命令用来查看文件(夹)的默认权限，默认值是 0002</li>
+</ul>
+<h2 id="压缩解压命令"><a href="#压缩解压命令" class="headerlink" title="压缩解压命令"></a>压缩解压命令</h2><h3 id="zip压缩"><a href="#zip压缩" class="headerlink" title="zip压缩"></a>zip压缩</h3><ul>
+<li>zip a.zip 1.txt ==&gt; 压缩</li>
+<li>unzip a.zip ==&gt; 解压缩</li>
+<li>可以对文件夹进行压缩</li>
+</ul>
+<h3 id="gzip压缩"><a href="#gzip压缩" class="headerlink" title="gzip压缩"></a>gzip压缩</h3><ul>
+<li>gzip 1.txt ==&gt; 会把原来的文件替换成为 1.txt.gz</li>
+<li>gunzip 1.txt.gz ==&gt; 把文件解压替换为1.txt</li>
+<li>-k：可以保留原有的数据 </li>
+<li>-r：递归压缩文件夹里的每一个文件</li>
+</ul>
+<h3 id="bzip2压缩"><a href="#bzip2压缩" class="headerlink" title="bzip2压缩"></a>bzip2压缩</h3><ul>
+<li>用法和gzip基本一致</li>
+<li>不能压缩文件夹</li>
+</ul>
+<h3 id="Linux里常见的压缩格式-zip-tgz-tbz"><a href="#Linux里常见的压缩格式-zip-tgz-tbz" class="headerlink" title="Linux里常见的压缩格式  .zip  .tgz  .tbz"></a>Linux里常见的压缩格式  .zip  .tgz  .tbz</h3><h3 id="tar：打包命令，不会对内容进行压缩，反而还会变大"><a href="#tar：打包命令，不会对内容进行压缩，反而还会变大" class="headerlink" title="tar：打包命令，不会对内容进行压缩，反而还会变大"></a>tar：打包命令，不会对内容进行压缩，反而还会变大</h3><ul>
+<li><p>三种模式，最多只能出现一个参数</p>
+<ul>
+<li>-c：打包</li>
+<li>-x：拆包</li>
+<li>-t：不拆包，查看内容</li>
+</ul>
+</li>
+<li><p>-f：指定文件</p>
+</li>
+<li><p>-v：查看过程</p>
+</li>
+<li><p>-z：使用gzip压缩解压</p>
+<ul>
+<li>tar -zcvf test.tgz test ==&gt; 将test文件夹使用gzip方式压缩成 test.tgz文件  tar -zxvf test.tgz ==&gt; 使用gzip方式解压</li>
+</ul>
+</li>
+<li><p>-j：使用bzip2压缩解压</p>
+<ul>
+<li>tar -jcvf test.tbz test ==&gt; 将test文件夹使用bzip2压缩成为test.tbz文件</li>
+<li>tar -jxvf test.tbz ==&gt; 使用bzip2方式解压</li>
+</ul>
+</li>
+</ul>
+<h2 id="nginx的安装和配置-了解"><a href="#nginx的安装和配置-了解" class="headerlink" title="nginx的安装和配置(了解)"></a>nginx的安装和配置(了解)</h2><h3 id="使用yum在线安装"><a href="#使用yum在线安装" class="headerlink" title="使用yum在线安装"></a>使用yum在线安装</h3><ul>
+<li><p>步骤</p>
+<ul>
+<li><ol>
+<li>sudo yum install nginx安装</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>sudo systemctl start nginx 启动服务</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>ps -aux | grep nginx</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>客户端就可以在浏览器里通过ip地址直接访问到服务器</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>配置文件的存放路径</p>
+<ul>
+<li><ol>
+<li>whereis nginx：查找和nginx相关的文件</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>在 /etc/nginx/nginx.conf 文件里存放了nginx的配置信息</li>
+</ol>
+</li>
+<li><ol start="3">
+<li><p>在这个配置文件里，有两个配置很重要</p>
+<ul>
+<li>listen   80 default_server ==&gt; 设置监听的端口</li>
+<li>root   /usr/share/nginx/html ==&gt; 静态页面的存放路径</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用下载源码安装"><a href="#使用下载源码安装" class="headerlink" title="使用下载源码安装"></a>使用下载源码安装</h3><ul>
+<li><p>步骤</p>
+<ul>
+<li><ol>
+<li>使用 wget 下载源代码</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>使用 tar 命令解压缩</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>进入到解压后的文件夹，执行 ./configure prefix==/usr/local/nginx命令，开始配置nginx，–prefix指定文件安装目录</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>在执行 configure 文件时，可能会报错，此时需要安装第三方的依赖包，安装依赖包以后，重新执行 configure 文件</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>此时会生成一个Makefile文件</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>执行sudo make命令，然后再执行sudo make install 或者sudo make &amp;&amp; sudo make install命令</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>进入到 /usr/local/nginx/sbin目录，执行sudo ./nginx 启动nginx</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>配置文件存放路径</p>
+<ul>
+<li>都在 /usr/local/nginx 这个文件夹下</li>
+</ul>
+</li>
+</ul>
+<h2 id="管道和重定向"><a href="#管道和重定向" class="headerlink" title="管道和重定向"></a>管道和重定向</h2><h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><ul>
+<li>| ：把上一个命令的标准输出作为下一个命令的标准输入</li>
+</ul>
+<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><ul>
+<li><p>方式</p>
+<ul>
+<li><blockquote>
+<p>：把执行结果重定向到一个指定的文件</p>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<p>：把执行结果追加到一个文件</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>分类</p>
+<ul>
+<li>标准输出：&gt; or 1&gt; 默认就是重定向的标准输出</li>
+<li>错误输出：2&gt; 将命令执行出错的结果重定向</li>
+<li>全部输出：&amp;&gt; 把所有的输出都重定向</li>
+</ul>
+</li>
+</ul>
+<h2 id="多个命令"><a href="#多个命令" class="headerlink" title="多个命令"></a>多个命令</h2><h3 id="cmd1；cmd2-gt-执行完成第一个命令以后，紧接着执行下一个命令"><a href="#cmd1；cmd2-gt-执行完成第一个命令以后，紧接着执行下一个命令" class="headerlink" title="cmd1；cmd2 ==&gt; 执行完成第一个命令以后，紧接着执行下一个命令"></a>cmd1；cmd2 ==&gt; 执行完成第一个命令以后，紧接着执行下一个命令</h3><h3 id="cmd1-cmd2-gt-如果前面的命令执行成功了，后面的命令就不再执行，前面的命令执行失败以后，才会执行后面的命令"><a href="#cmd1-cmd2-gt-如果前面的命令执行成功了，后面的命令就不再执行，前面的命令执行失败以后，才会执行后面的命令" class="headerlink" title="cmd1 || cmd2 ==&gt; 如果前面的命令执行成功了，后面的命令就不再执行，前面的命令执行失败以后，才会执行后面的命令"></a>cmd1 || cmd2 ==&gt; 如果前面的命令执行成功了，后面的命令就不再执行，前面的命令执行失败以后，才会执行后面的命令</h3><h3 id="cmd1-amp-amp-cmd2-gt-如果前面的命令执行成功以后才会执行后面的命令，如果前面的命令执行失败，后面的命令就不再执行"><a href="#cmd1-amp-amp-cmd2-gt-如果前面的命令执行成功以后才会执行后面的命令，如果前面的命令执行失败，后面的命令就不再执行" class="headerlink" title="cmd1 &amp;&amp; cmd2 ==&gt; 如果前面的命令执行成功以后才会执行后面的命令，如果前面的命令执行失败，后面的命令就不再执行"></a>cmd1 &amp;&amp; cmd2 ==&gt; 如果前面的命令执行成功以后才会执行后面的命令，如果前面的命令执行失败，后面的命令就不再执行</h3><p><em>XMind - Trial Version</em></p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">#Linux</a></li></ul>
+      </section>
+
+      <section class="article-navs">
+        
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div id="article-nav-newer" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/28/mysql%E6%8C%87%E4%BB%A4/"></a>
+          <strong class="article-nav-caption">Newer</strong>
+          <p class="article-nav-title">
+            
+              MySQL指令笔记
+            
+          </p>
+        </article>
+      </div>
+    
+    
+      <div id="article-nav-older" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/24/hello-world/"></a>
+          <strong class="article-nav-caption">Older</strong>
+          <p class="article-nav-title">
+            
+              Hello World
+            
+          </p>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+      </section>
+
+      
+
+  
+  
+
+  
+  
+
+
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons social-icons-footer">
+      <a href="mailto:944292511@qq.com" target="_blank" rel="noopener noreferrer">
+  <svg class="icon icon-email" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M490.338462 592.738462c11.815385 11.815385 29.538462 11.815385 41.353846 0l445.046154-413.538462c7.876923-15.753846 5.907692-41.353846-25.6-41.353846l-880.246154 1.969231c-23.630769 0-43.323077 21.661538-25.6 41.353846l445.046154 411.569231zM984.615385 340.676923c0-19.692308-23.630769-31.507692-39.384616-17.723077L596.676923 643.938462c-23.630769 21.661538-53.169231 33.476923-84.676923 33.476923s-61.046154-11.815385-84.676923-31.507693L80.738462 322.953846c-15.753846-13.784615-39.384615-3.938462-39.384616 17.723077C39.384615 334.769231 39.384615 787.692308 39.384615 787.692308c0 43.323077 35.446154 78.769231 78.769231 78.76923h787.692308c43.323077 0 78.769231-35.446154 78.769231-78.76923V340.676923z"></path>
+  </svg>
+</a><a href="https://github.com/xcrayon" target="_blank" rel="noopener noreferrer">
+  <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+  </svg>
+</a><a href="https://weibo.com/u/7317928013" target="_blank" rel="noopener noreferrer">
+  <svg class="icon icon-weibo" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M385.682429 733.696q11.995429-19.456 6.290286-39.424t-25.746286-28.598857q-19.456-7.972571-41.691429-0.585143t-34.304 26.258286q-12.580571 19.456-7.460571 39.131429t24.576 28.891429 42.569143 1.462857 35.693714-27.136zM439.442429 664.576q4.534857-7.460571 1.974857-15.140571t-10.020571-10.605714q-7.972571-2.852571-16.310857 0.292571t-12.288 10.605714q-9.728 17.700571 7.460571 25.746286 7.972571 2.852571 16.603429-0.292571t12.580571-10.605714zM538.843572 725.723429q-25.746286 58.294857-90.258286 85.723429t-128 6.875429q-61.147429-19.456-84.260571-72.265143t3.730286-107.154286q26.843429-53.174857 86.601143-79.433143t120.32-10.825143q63.414857 16.603429 90.550857 68.315429t1.462857 108.836571zM717.165858 634.294857q-5.12-54.857143-50.834286-97.133714t-119.149714-62.317714-156.891429-11.995429q-127.414857 13.165714-211.163429 80.822857t-75.702857 151.113143q5.12 54.857143 50.834286 97.133714t119.149714 62.317714 156.891429 11.995429q127.414857-13.165714 211.163429-80.822857t75.702857-151.113143zM893.147572 636.562286q0 38.838857-21.138286 79.725714t-62.317714 78.262857-96.256 67.145143-129.170286 47.396571-154.550857 17.700571-157.110857-19.163429-137.435429-53.174857-98.011429-86.308571-37.156571-114.029714q0-65.682286 39.716571-139.995429t112.859429-147.456q96.548571-96.548571 195.145143-134.875429t140.873143 4.022857q37.156571 36.571429 11.410286 119.442286-2.267429 7.972571-0.585143 11.410286t5.705143 4.022857 8.265143-0.292571 7.68-1.974857l3.437714-1.170286q79.433143-33.718857 140.580571-33.718857t87.405714 34.889143q25.746286 35.986286 0 101.741714-1.170286 7.460571-2.56 11.410286t2.56 7.168 6.875429 4.315429 9.728 3.437714q32.548571 10.313143 58.88 26.843429t45.714286 46.592 19.456 66.56zM850.871001 279.990857q23.990857 26.843429 31.158857 62.025143t-3.730286 67.145143q-4.534857 13.165714-16.822857 19.456t-25.453714 2.267429q-13.165714-4.534857-19.456-16.822857t-2.267429-25.453714q11.410286-35.986286-13.677714-63.414857t-61.147429-19.968q-13.677714 2.852571-25.746286-4.534857t-14.262857-21.138286q-2.852571-13.677714 4.534857-25.453714t21.138286-14.555429q34.304-7.460571 68.022857 3.145143t57.709714 37.449143zM954.295001 186.88q49.737143 54.857143 64.292571 127.122286t-7.68 138.020571q-5.12 15.433143-19.456 22.820571t-29.696 2.267429-22.820571-19.456-2.852571-29.696q16.018286-46.884571 5.705143-98.304t-45.714286-90.258286q-35.401143-39.424-84.553143-54.564571t-98.889143-4.827429q-16.018286 3.437714-29.696-5.412571t-17.115429-24.868571 5.412571-29.403429 24.868571-16.822857q70.290286-14.848 139.410286 6.582857t118.857143 76.873143z"></path>
+  </svg>
+</a><a href="https://y.music.163.com/m/user?id=2010531998" target="_blank" rel="noopener noreferrer">
+  <svg class="icon icon-cloudmusic" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M952.17867 503.263237a341.054956 341.054956 0 0 0-56.853199-113.706399 408.604266 408.604266 0 0 0-109.723463-98.352823 304.662484 304.662484 0 0 0-143.257215-42.077792L621.305897 170.238394a40.343287 40.343287 0 0 1 10.792472-36.392472 56.88532 56.88532 0 0 1 36.392472-18.758344 102.785445 102.785445 0 0 1 56.853199 18.758344c6.263488 3.404768 10.792472 9.090088 17.05596 13.073024a57.335006 57.335006 0 0 0 82.999247-70.632873 66.521455 66.521455 0 0 0-22.74128-27.848432 237.691343 237.691343 0 0 0-89.262735-43.202007A170.559598 170.559598 0 0 0 625.288833 6.42409a167.026349 167.026349 0 0 0-60.836135 37.516688 164.328231 164.328231 0 0 0-40.921456 51.713927 156.908407 156.908407 0 0 0-8.54404 113.706399l13.651192 52.870264a284.298118 284.298118 0 0 0-158.064743 109.209535 256.963614 256.963614 0 0 0-43.202007 156.908407 248.419573 248.419573 0 0 0 13.651192 74.487327 205.281807 205.281807 0 0 0 80.718695 104.616312 185.945295 185.945295 0 0 0 136.447679 25.696361 193.879046 193.879046 0 0 0 156.330238-196.705646L708.802008 503.263237c-11.948808-46.060728-24.443664-91.543287-35.814304-137.025847a182.283563 182.283563 0 0 1 47.763112 18.180176 316.611292 316.611292 0 0 1 47.763111 34.690088A239.907654 239.907654 0 0 1 840.752823 529.987453a284.169636 284.169636 0 0 1 0 158.064743 252.241907 252.241907 0 0 1-21.584943 51.167879 308.741782 308.741782 0 0 1-168.279047 144.542033 387.918695 387.918695 0 0 1-130.184191 23.319448 332.607277 332.607277 0 0 1-155.206022-37.516688A367.233124 367.233124 0 0 1 194.87478 672.666499a373.014806 373.014806 0 0 1-20.460727-180.806022A366.173149 366.173149 0 0 1 406.869762 198.536512a57.399247 57.399247 0 0 0 13.073023-100.055207 76.189711 76.189711 0 0 0-63.662735-3.404768A479.815307 479.815307 0 0 0 68.705646 436.163614a488.905395 488.905395 0 0 0 129.027855 450.84266 454.857716 454.857716 0 0 0 248.997741 131.886574 470.885822 470.885822 0 0 0 138.117942 0A454.889837 454.889837 0 0 0 773.042911 952.949561a427.523212 427.523212 0 0 0 170.559598-209.232622 417.276788 417.276788 0 0 0 22.74128-109.209536 378.089837 378.089837 0 0 0-14.165119-131.244166z m-412.747804 118.845671a72.174655 72.174655 0 0 1-56.8532-10.792471 98.352823 98.352823 0 0 1-37.516687-61.382184 170.68808 170.68808 0 0 1 0-65.943287 133.042911 133.042911 0 0 1 33.533751-63.662735 181.35207 181.35207 0 0 1 80.718695-46.606776l39.219072 148.364367a204.189711 204.189711 0 0 1 5.107152 26.146048 79.594479 79.594479 0 0 1-64.208783 73.844918z"></path>
+  </svg>
+</a>    </div>
+     
+    <p>&copy; 2020 <a href="/" target="_blank">xCrayon</a></p>
+
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+  <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+  <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+</svg> 
+  </div>
+
+  
+  
+
+
+  <!-- aplayer 音频 start -->
+  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <script type="text/javascript">
+    const aplayer = document.querySelectorAll(".aplayer");
+    aplayer && initaplayer(aplayer);
+    function initaplayer(els) {
+      let elsArr = Array.from(els);
+      elsArr.forEach(el => {
+        new APlayer({
+          container: el,
+          audio: { ...el.dataset },
+          theme: "#b7daff",
+          lrcType: 3,
+          autoplay: false,
+          loop: false,
+          mutex: true,
+        });
+      });
+    }
+  </script>
+  <!-- aplayer 音频 end -->
+  
+
+<!-- dplayer 视频 start -->
+<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      let subtitle = el.dataset.subtitle;
+
+      let options = {
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      }
+
+      if (subtitle) {
+        options.subtitle = {
+          url: el.dataset.subtitle,
+        }
+      }
+      new DPlayer(options);
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
+
+<!-- waterfall 瀑布流 start -->
+
+<script src="/lib/waterfall.min.js"></script>
+
+<script type="text/javascript">
+
+const waterfalls = document.querySelectorAll(".waterfall-container");
+
+if (waterfalls && waterfalls.length > 0) {
+  waterfalls.forEach((waterfall, index) => {
+    let cls = "waterfall-container-" + index;
+    waterfall.classList.add(cls);
+    initWaterfall(cls, waterfall);
+  });
+}
+
+function initWaterfall(selector, el) {
+  const options = {};
+  if (Object.keys(el.dataset).length > 0) {
+    for (let k in el.dataset) {
+      options[k] = el.dataset[k];
+    }
+  }
+  waterfall(`.${selector}`, options);
+}
+</script>
+<!-- waterfall 瀑布流 end -->
+
+
+  <!-- zoom start -->
+  
+<script src="/lib/zoom.min.js"></script>
+
+  <script type="text/javascript">
+    document.querySelector(".article-content") && zoom(".article-content");
+  </script>
+  <!-- zoom end -->
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+
+</body>
+</html>

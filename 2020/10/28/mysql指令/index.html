@@ -20,7 +20,7 @@
 
   
 
-  <title>音乐 | xCrayon</title>
+  <title>MySQL指令笔记 | xCrayon</title>
 
   
 
@@ -82,10 +82,7 @@
 
     
 <!-- header container -->
-<header class="header-container">
-
-  
-  
+<header class="header-container post">
 
   
   
@@ -104,51 +101,260 @@
     <div class="header-content">
       <div class="post-image" style="background-image: url(http://www.dmoe.cc/random.php)"></div>
       <div class="post-text">
-        <h1 class="title-wrap">音乐</h1>
-        
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+        </div>
+        <h1 class="title-wrap">MySQL指令笔记</h1>
+        <h2 class="title-sub-wrap">
+          <strong>xCrayon</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-10-27T17:20:15.826Z" itemprop="datePublished">2020-10-28</time>
+  </a>
+
+        </h2>
       </div>
     </div>
   
 
+  
+  
+
   </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
+<!-- 文章内容 -->
 
 <div class="body-container">
-  
-  
   <article class="content-container article-container">
     <div class="article-content">
-      <div class="article-entry"><!-- require APlayer -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+      
+      
 
-<p><meting-js
-    server="netease"
-    type="playlist"
-    id="3026825782"><br></meting-js></p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css"></div>
+      <section class="article-entry">
+        
+    <figure class="bookmark-card">
+      <a class="bookmark-container" target="_blank" title="MySQL指令思维导图" href="https://www.edrawsoft.cn/viewer/public/s/9a153888120861">
+        <div class="bookmark-content">
+          <div class="bookmark-name">MySQL指令思维导图</div>
+          <div class="bookmark-link">https://www.edrawsoft.cn/viewer/public/s/9a153888120861</div>
+        </div>
+        
+      <div class="bookmark-cover">
+        <img src="http://www.dmoe.cc/random.php" alt="MySQL指令思维导图" />
+      </div>
+    
+      </a>
+    </figure>
+  
+
+<h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><h2 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h2><h2 id="连接mysql数据库"><a href="#连接mysql数据库" class="headerlink" title="连接mysql数据库"></a>连接mysql数据库</h2><h2 id="用户管理相关的命令"><a href="#用户管理相关的命令" class="headerlink" title="用户管理相关的命令"></a>用户管理相关的命令</h2><h2 id="创建结构"><a href="#创建结构" class="headerlink" title="创建结构"></a>创建结构</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
+<li>show databases;</li>
+<li>create database <dbname> charset=utf8;</li>
+<li>use <dbname>;</li>
+<li>drop database <dbname>;</li>
+<li>alter databse <dbname> charset=utf8;  # 修改数据库的编码方式</li>
+</ul>
+<h3 id="创建表格"><a href="#创建表格" class="headerlink" title="创建表格"></a>创建表格</h3><ul>
+<li><p>create table <tablename>(<br>id int primary key auto_increment,   # int 类型的字段id ， 主键自增<br>name varchar(128),   # 至少要写字段的名字以及类型<br>tel varchar(32) unique,   # 字段tel，有唯一约束<br>）</p>
+</li>
+<li><p>desc <tabkename>;    describe <tablebname>;      #查看表结构 </p>
+</li>
+<li><p>修改表</p>
+<ul>
+<li>alter table <tablename> rename <tablename>;    # 修改表格的名字</li>
+</ul>
+</li>
+<li><p>移动表</p>
+<ul>
+<li>alter table <tablename> rename to &lt;newdbname.newtbname&gt;;</li>
+</ul>
+</li>
+<li><p>表格添加元素(新增一个字段)</p>
+<ul>
+<li>alter table <tbname> add  &lt;字段名&gt; [属性]</li>
+<li>alter table <tbname> add  &lt;字段名&gt; [属性] first</li>
+<li>alter table <tbname> add  &lt;字段名&gt; [属性] after &lt;字段名&gt;</li>
+</ul>
+</li>
+<li><p>修改字段名属性</p>
+<ul>
+<li>alter table <tbname> modify &lt;字段名&gt; [属性]；</li>
+</ul>
+</li>
+<li><p>修改字段名</p>
+<ul>
+<li>alter table <tbname> change &lt;字段名&gt;  &lt;新的字段名&gt; [属性]；</li>
+</ul>
+</li>
+<li><p>删除字段名</p>
+<ul>
+<li>alter table <tbname> drop &lt;字段名&gt;；</li>
+</ul>
+</li>
+<li><p>show create table <tablename>;  #查看建表结构</p>
+</li>
+<li><p>drop tables <tablebame>;  # 删除表格</p>
+</li>
+</ul>
+<h2 id="操作数据"><a href="#操作数据" class="headerlink" title="操作数据"></a>操作数据</h2><h3 id="增：C"><a href="#增：C" class="headerlink" title="增：C"></a>增：C</h3><ul>
+<li>insert 语句用来插入数据</li>
+<li>insert into <tbname>(字段1，字段2…) values(值1，值2…);</li>
+<li>insert into <tbname> values(v1,v2….vn)</li>
+</ul>
+<h3 id="查：R"><a href="#查：R" class="headerlink" title="查：R"></a>查：R</h3><ul>
+<li>select 语句用来查询数据，一般会配合where或者having来进行条件判断</li>
+<li>select &lt;字段名&gt; from &lt;表名&gt;</li>
+</ul>
+<h3 id="改：U"><a href="#改：U" class="headerlink" title="改：U"></a>改：U</h3><ul>
+<li>update 语句用来修改数据，一般也要配合where来进行条件判断</li>
+<li>update <tbname> set 属性名=属性值 where 条件</li>
+</ul>
+<h3 id="删：D"><a href="#删：D" class="headerlink" title="删：D"></a>删：D</h3><ul>
+<li>delete 语句用来删除数据，要配合where语句进行条件判断，否则会删除所有数据</li>
+<li>delete from &lt;表名&gt; where 条件</li>
+<li>delete from &lt;表名&gt; # 删除所有数据</li>
+<li>truncate &lt;表名&gt; # 清空表格</li>
+</ul>
+<h3 id="复制表格"><a href="#复制表格" class="headerlink" title="复制表格"></a>复制表格</h3><ul>
+<li><p>方式一：create table &lt;新表&gt; select * from &lt;原表&gt;</p>
+<ul>
+<li>创建表1，并将表2里的所有数据复制到表1</li>
+<li>不建议使用，原表里字段的属性都不会被复制</li>
+</ul>
+</li>
+<li><p>方式二：复制结构，再复制数据</p>
+<ul>
+<li><p>create table &lt;新表&gt; like &lt;原表&gt;</p>
+<ul>
+<li>创建新表，并复制原表的字段和属性，不复制数据</li>
+</ul>
+</li>
+<li><p>insert into &lt;新表&gt; select * from &lt;原表&gt;</p>
+<ul>
+<li>将原装里的所有数据复制到新表</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="编码集和校对集"><a href="#编码集和校对集" class="headerlink" title="编码集和校对集"></a>编码集和校对集</h2><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h2 id="列的常见属性"><a href="#列的常见属性" class="headerlink" title="列的常见属性"></a>列的常见属性</h2><h3 id="not-null"><a href="#not-null" class="headerlink" title="not null"></a>not null</h3><h3 id="default"><a href="#default" class="headerlink" title="default"></a>default</h3><h2 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h2><h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><ul>
+<li>alter table userinfo add constraint fk_user_id foreign key(id) references user(id);</li>
+</ul>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
+<li>alter table userinfo drop foreign key fk_user_id </li>
+</ul>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><h3 id="开启"><a href="#开启" class="headerlink" title="开启"></a>开启</h3><ul>
+<li>BEGIN 或 START TRANSACTION</li>
+</ul>
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><ul>
+<li>COMMIT</li>
+</ul>
+<h3 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h3><ul>
+<li>ROLLBACK</li>
+</ul>
+<h3 id="创建保存点"><a href="#创建保存点" class="headerlink" title="创建保存点"></a>创建保存点</h3><ul>
+<li>SAVEPOINT identifier</li>
+</ul>
+<h3 id="删除保存点"><a href="#删除保存点" class="headerlink" title="删除保存点"></a>删除保存点</h3><ul>
+<li>RELEASE SAVEPOINT identifier</li>
+</ul>
+<h3 id="把事务回滚到保存点"><a href="#把事务回滚到保存点" class="headerlink" title="把事务回滚到保存点"></a>把事务回滚到保存点</h3><ul>
+<li>ROLLBACK TO identifier</li>
+</ul>
+<h3 id="查询事务的隔离级别"><a href="#查询事务的隔离级别" class="headerlink" title="查询事务的隔离级别"></a>查询事务的隔离级别</h3><ul>
+<li>show variables like ‘%isolation%’</li>
+</ul>
+<h3 id="设置事务的隔离级别"><a href="#设置事务的隔离级别" class="headerlink" title="设置事务的隔离级别"></a>设置事务的隔离级别</h3><ul>
+<li>SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ INCOMMIITED | READ COMMITED | REPEATABLE READ | SERIALIZABLE}</li>
+</ul>
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><h3 id="添加-1"><a href="#添加-1" class="headerlink" title="添加"></a>添加</h3><ul>
+<li>delimiter // or &amp;&amp;  or $$ create procedure foo()  begin<br>   接下来写sql语句      end // or &amp;&amp; or $$           call foo()$$                delimiter ；</li>
+</ul>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><ul>
+<li>show create procedure foo</li>
+<li>show procedure status like “%foo%”</li>
+</ul>
+<h3 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h3><ul>
+<li><p>创建</p>
+<ul>
+<li>create procedure foo(in uid int，in new_name varchar(32))</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li>update student set name=new_name where id=uid</li>
+<li>call foo(2，’rose’)</li>
+</ul>
+</li>
+</ul>
+<h3 id="删除-1"><a href="#删除-1" class="headerlink" title="删除"></a>删除</h3><ul>
+<li>drop procedure foo</li>
+</ul>
+<h2 id="备份与恢复"><a href="#备份与恢复" class="headerlink" title="备份与恢复"></a>备份与恢复</h2><h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><ul>
+<li>mysqldump -uroot -p python201 &gt; python201.sql</li>
+</ul>
+<h3 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h3><ul>
+<li>mysql -uroot -p python201&lt; python201.sql</li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/" rel="tag">#MySQL</a></li></ul>
+      </section>
+
+      <section class="article-navs">
+        
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div id="article-nav-newer" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/28/mangodb%E7%94%A8%E6%B3%95/"></a>
+          <strong class="article-nav-caption">Newer</strong>
+          <p class="article-nav-title">
+            
+              mangoDB指令笔记
+            
+          </p>
+        </article>
+      </div>
+    
+    
+      <div id="article-nav-older" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/28/Linux%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/"></a>
+          <strong class="article-nav-caption">Older</strong>
+          <p class="article-nav-title">
+            
+              Linux指令笔记
+            
+          </p>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+      </section>
+
+      
+
+  
+  
+
+  
+  
+
+
     </div>
   </article>
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">

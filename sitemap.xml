@@ -2,6 +2,34 @@
 <urlset xmlns="http://xcrayon.cn">
   
   <url>
+    <loc>http://xcrayon.cn/2020/10/28/mangodb%E7%94%A8%E6%B3%95/</loc>
+    
+    <lastmod>2020-10-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/2020/10/28/shell%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2020-10-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/2020/10/28/Linux%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2020-10-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/2020/10/28/mysql%E6%8C%87%E4%BB%A4/</loc>
+    
+    <lastmod>2020-10-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xcrayon.cn/about/index.html</loc>
     
     <lastmod>2020-10-27</lastmod>
@@ -123,7 +151,7 @@
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/Python/</loc>
+    <loc>http://xcrayon.cn/tags/Linux/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -137,7 +165,21 @@
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/xpath/</loc>
+    <loc>http://xcrayon.cn/tags/Python/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/tags/mangoDB/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/tags/MySQL/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -145,6 +187,20 @@
   
   <url>
     <loc>http://xcrayon.cn/tags/Scrapy/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/tags/shell/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/tags/xpath/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -167,13 +223,6 @@
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/categories/Python/</loc>
-    <lastmod>2020-10-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://xcrayon.cn/categories/Redis/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
@@ -181,7 +230,35 @@
   </url>
   
   <url>
+    <loc>http://xcrayon.cn/categories/Python/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/categories/mangoDB/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/categories/MySQL/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://xcrayon.cn/categories/Scrapy/</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xcrayon.cn/categories/shell/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
