@@ -2,6 +2,13 @@
 <urlset xmlns="http://xcrayon.cn">
   
   <url>
+    <loc>http://xcrayon.cn/about/index.html</loc>
+    
+    <lastmod>2020-10-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xcrayon.cn/tags/index.html</loc>
     
     <lastmod>2020-10-27</lastmod>
@@ -86,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/about/index.html</loc>
-    
-    <lastmod>2020-10-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://xcrayon.cn/archives/index.html</loc>
     
     <lastmod>2020-10-25</lastmod>
@@ -109,14 +109,14 @@
 
   
   <url>
-    <loc>http://xcrayon.cn/tags/Git/</loc>
+    <loc>http://xcrayon.cn/tags/Docker/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/Docker/</loc>
+    <loc>http://xcrayon.cn/tags/Git/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -137,14 +137,14 @@
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/Scrapy/</loc>
+    <loc>http://xcrayon.cn/tags/xpath/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/tags/xpath/</loc>
+    <loc>http://xcrayon.cn/tags/Scrapy/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -153,14 +153,14 @@
 
   
   <url>
-    <loc>http://xcrayon.cn/categories/Git/</loc>
+    <loc>http://xcrayon.cn/categories/Linux/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://xcrayon.cn/categories/Linux/</loc>
+    <loc>http://xcrayon.cn/categories/Git/</loc>
     <lastmod>2020-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
