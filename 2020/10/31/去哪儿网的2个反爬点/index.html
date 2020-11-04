@@ -20,7 +20,7 @@
 
   
 
-  <title>xCrayon</title>
+  <title>去哪儿网的2个反爬点 | xCrayon</title>
 
   
 
@@ -80,32 +80,40 @@
 
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
 
   
   
     <div class="header-content">
       <div class="post-image" style="background-image: url(http://www.dmoe.cc/random.php)"></div>
       <div class="post-text">
-        <h1 class="title-wrap">xCrayon</h1>
-        
-          <h2 class="title-sub-wrap">Harder Better Faster Stronger</h2>
-        
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/Python/">Python</a>
+        </div>
+        <h1 class="title-wrap">去哪儿网的2个反爬点</h1>
+        <h2 class="title-sub-wrap">
+          <strong>xCrayon</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-10-30T18:28:45.270Z" itemprop="datePublished">2020-10-31</time>
+  </a>
+
+        </h2>
       </div>
-       
     </div>
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -113,96 +121,126 @@
 
   </header>
 
-    <!-- 首页 -->
+    <!-- 文章 -->
 
-<!-- post list container -->
-<div class="body-container float">
-  <div class="content-container article-list">
-    <div class="card-container card-articles">
-      <div class="card-wrap">
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/09/29/Docker%E6%8C%87%E4%BB%A4/" itemprop="url"></a>
-              
-              <h2 class="article-title">Docker的安装与用法</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/09/29/Docker%E6%8C%87%E4%BB%A4/" class="article-date">
-    <time datetime="2020-09-29T13:46:31.033Z" itemprop="datePublished">2020-09-29</time>
-  </a>
+<!-- 文章内容 -->
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Linux/">Linux</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/09/29/Linux%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/" itemprop="url"></a>
-              
-              <h2 class="article-title">Git项目初始化</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/09/29/Linux%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/" class="article-date">
-    <time datetime="2020-09-29T04:07:44.482Z" itemprop="datePublished">2020-09-29</time>
-  </a>
+<div class="body-container">
+  <article class="content-container article-container">
+    <div class="article-content">
+      
+      
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Git/">Git</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/08/21/Redis%E9%85%8D%E7%BD%AE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" itemprop="url"></a>
-              
-              <h2 class="article-title">Redis配置远程连接</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/08/21/Redis%E9%85%8D%E7%BD%AE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" class="article-date">
-    <time datetime="2020-08-20T17:04:07.827Z" itemprop="datePublished">2020-08-21</time>
-  </a>
+      <section class="article-entry">
+        <h2 id="一、去哪儿网会检测是否在使用爬虫工具模拟浏览器，如selenium"><a href="#一、去哪儿网会检测是否在使用爬虫工具模拟浏览器，如selenium" class="headerlink" title="一、去哪儿网会检测是否在使用爬虫工具模拟浏览器，如selenium"></a>一、去哪儿网会检测是否在使用爬虫工具模拟浏览器，如selenium</h2><p><strong>表现形式为</strong>：</p>
+<p>在<strong>console</strong>面板执行<code>window.navigator.webdriver</code></p>
+<p>结果返回<code>true</code></p>
+<p><strong>解决思想</strong>：</p>
+<p>使其返回<code>undefine</code>即让浏览器识别为手动控制而非自动</p>
+<p><strong>解决方法：</strong></p>
+<ol>
+<li><p>让driver执行script代码</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">script = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Object.defineProperty(navigator, &#x27;webdriver&#x27;, &#123;</span></span><br><span class="line"><span class="string">        get: () =&gt; undefined</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">&quot;Page.addScriptToEvaluateOnNewDocument&quot;</span>, &#123;<span class="string">&quot;source&quot;</span>: script&#125;)</span><br></pre></td></tr></table></figure>
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Redis/">Redis</a>
-              </div>
-            </article>
-          </div>
+<p> 【缺点】：点击链接、输入网址进入另一个页面，或者开启新的窗口，<code>window.navigator.webdriver</code>又变成了<code>true</code></p>
+</li>
+<li><p>启动Chromedriver之前，为Chrome开启实验性功能参数<code>excludeSwitches</code>，它的值为<code>[&#39;enable-automation&#39;]</code></p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver <span class="keyword">import</span> Chrome</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver <span class="keyword">import</span> ChromeOptions</span><br><span class="line"></span><br><span class="line">option = ChromeOptions()</span><br><span class="line">option.add_experimental_option(<span class="string">&#x27;excludeSwitches&#x27;</span>, [<span class="string">&#x27;enable-automation&#x27;</span>])</span><br><span class="line">driver = Chrome(options=option)</span><br></pre></td></tr></table></figure>
+
+<p> 【优点】：无论你打开新的网页，开启新的窗口还是点击链接进入其他页面，都不会让它变成<code>true</code></p>
+</li>
+</ol>
+
+    <figure class="bookmark-card">
+      <a class="bookmark-container" target="_blank" title="此处参考" href="https://www.cnblogs.com/xieqiankun/p/hide-webdriver.html">
+        <div class="bookmark-content">
+          <div class="bookmark-name">此处参考</div>
+          <div class="bookmark-link">https://www.cnblogs.com/xieqiankun/p/hide-webdriver.html</div>
+        </div>
         
+      <div class="bookmark-cover">
+        <img src="http://www.dmoe.cc/random.php" alt="此处参考" />
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- page container -->
-
-  <nav class="page-container">
     
-    <a class="extend prev" rel="prev" href="/">ʚ</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
+      </a>
+    </figure>
+  
+
+<h2 id="二、爬取价格的坑"><a href="#二、爬取价格的坑" class="headerlink" title="二、爬取价格的坑"></a>二、爬取价格的坑</h2><p><strong>表现形式为</strong>：</p>
+<p>css偏移，即通过修改css样式，打乱文字的排版使得网页源代码中的信息与在浏览器上看到的信息不一致，从而达到反爬虫的效果。</p>
+<p><img src="C:\Users\邓一超\AppData\Roaming\Typora\typora-user-images\image-20201031024835539.png" alt="image-20201031024835539"></p>
+<p><strong>解决思想</strong>：</p>
+<p>通过分析、对比，发现了其隐藏的规律：显示在网页上的数字只有<code>&lt;i&gt;</code>标签，然后其通过下面的<code>&lt;b&gt;</code>标签来更改<code>&lt;i&gt;</code>标签上的数字；第一个<code>&lt;b&gt;</code>标签的<code>style</code>属性已经说明了其宽度即图中的<code>style=&quot;width:48px;left:-48px&quot;</code>，平均一个数字的宽度<code>&lt;i&gt;</code>标签也已说明即图中的<code>style=&quot;width: 16px;&quot;</code>，而下面的<code>&lt;b&gt;</code>标签上的数字是通过其设定的<code>style</code>属性来错位更改<code>&lt;i&gt;</code>标签上的数字。</p>
+<p><img src="C:\Users\邓一超\AppData\Roaming\Typora\typora-user-images\image-20201031025120255.png" alt="image-20201031025120255"></p>
+<p><strong>解决方法：</strong></p>
+<p>示例代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">flights &#x3D; WebDriverWait(driver, 1).until(</span><br><span class="line">    EC.presence_of_all_elements_located((By.XPATH, &#39;&#x2F;&#x2F;div[@class&#x3D;&quot;m-airfly-lst&quot;]&#x2F;div[@class&#x3D;&quot;b-airfly&quot;]&#39;))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">for f in flights:</span><br><span class="line">    f_data &#x3D; &#123;&#125;</span><br><span class="line">    f_data[&#39;airline&#39;] &#x3D; f.find_element_by_xpath(&#39;.&#x2F;&#x2F;div[@class&#x3D;&quot;d-air&quot;]&#39;).text.replace(&#39;\n&#39;, &#39;-&#39;)</span><br><span class="line">    f_data[&#39;depart&#39;] &#x3D; f.find_element_by_xpath(&#39;.&#x2F;&#x2F;div[@class&#x3D;&quot;sep-lf&quot;]&#39;).text.replace(&#39;\n&#39;, &#39;-&#39;)</span><br><span class="line">    f_data[&#39;duration&#39;] &#x3D; f.find_element_by_xpath(&#39;.&#x2F;&#x2F;div[@class&#x3D;&quot;sep-ct&quot;]&#39;).text</span><br><span class="line">    f_data[&#39;dest&#39;] &#x3D; f.find_element_by_xpath(&#39;.&#x2F;&#x2F;div[@class&#x3D;&quot;sep-rt&quot;]&#39;).text.replace(&#39;\n&#39;, &#39;-&#39;)</span><br><span class="line">    # 以下为处理css偏移反爬程序</span><br><span class="line">    fake_price &#x3D; list(f.find_element_by_xpath(&#39;.&#x2F;&#x2F;span[@class&#x3D;&quot;prc_wp&quot;]&#x2F;&#x2F;em&#x2F;b[1]&#39;).text)</span><br><span class="line">    covers &#x3D; f.find_elements_by_xpath(&#39;.&#x2F;&#x2F;span[@class&#x3D;&quot;prc_wp&quot;]&#x2F;&#x2F;em&#x2F;b[position()&gt;1]&#39;)</span><br><span class="line">    for c in covers:</span><br><span class="line">        index &#x3D; int(c.value_of_css_property(&#39;left&#39;)[:-2]) &#x2F;&#x2F; c.size[&#39;width&#39;]</span><br><span class="line">        fake_price[index] &#x3D; c.text</span><br><span class="line">    f_data[&#39;price&#39;]</span><br></pre></td></tr></table></figure>
 
 
+    <figure class="bookmark-card">
+      <a class="bookmark-container" target="_blank" title="此处参考" href="https://blog.csdn.net/sinat_39629323/article/details/104048860?utm_medium">
+        <div class="bookmark-content">
+          <div class="bookmark-name">此处参考</div>
+          <div class="bookmark-link">https://blog.csdn.net/sinat_39629323/article/details/104048860?utm_medium</div>
+        </div>
+        
+      <div class="bookmark-cover">
+        <img src="http://www.dmoe.cc/random.php" alt="此处参考" />
+      </div>
+    
+      </a>
+    </figure>
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">#Python</a></li></ul>
+      </section>
+
+      <section class="article-navs">
+        
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+    
+      <div id="article-nav-older" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/28/Git%20Push%E6%8A%A5%E9%94%99/"></a>
+          <strong class="article-nav-caption">Older</strong>
+          <p class="article-nav-title">
+            
+              git push报错
+            
+          </p>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+      </section>
+
+      
+
+  
+  
+
+  
+  
+
+
+    </div>
+  </article>
+</div>
 
     <!-- footer container -->
 <footer id="footer" class="footer">
