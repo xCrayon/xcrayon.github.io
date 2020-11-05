@@ -20,7 +20,7 @@
 
   
 
-  <title>Archives | xCrayon</title>
+  <title>4个基础的排序算法(Python实现) | xCrayon</title>
 
   
 
@@ -80,7 +80,16 @@
 
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
+
+  
+  
+
+  
+  
+
+  
+  
 
   
   
@@ -90,19 +99,21 @@
     <div class="header-content">
       <div class="post-image" style="background-image: url(http://www.dmoe.cc/random.php)"></div>
       <div class="post-text">
-        <h1 class="title-wrap">归档</h1>
-        <h2 class="title-sub-wrap">共有14篇文章</h2>
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a>
+        </div>
+        <h1 class="title-wrap">4个基础的排序算法(Python实现)</h1>
+        <h2 class="title-sub-wrap">
+          <strong>xCrayon</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-11-05T17:19:50.411Z" itemprop="datePublished">2020-11-06</time>
+  </a>
+
+        </h2>
       </div>
     </div>
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -110,252 +121,90 @@
 
   </header>
 
-    <!-- 归档 -->
+    <!-- 文章 -->
 
-<!-- post list container -->
-<div class="body-container float">
-  <div class="content-container article-list">
-    <div class="card-container card-articles">
-      <div class="card-wrap">
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/31/%E5%8E%BB%E5%93%AA%E5%84%BF%E7%BD%91%E7%9A%842%E4%B8%AA%E5%8F%8D%E7%88%AC%E7%82%B9/" itemprop="url"></a>
-              
-              <h2 class="article-title">去哪儿网的2个反爬点</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/31/%E5%8E%BB%E5%93%AA%E5%84%BF%E7%BD%91%E7%9A%842%E4%B8%AA%E5%8F%8D%E7%88%AC%E7%82%B9/" class="article-date">
-    <time datetime="2020-10-30T18:28:45.270Z" itemprop="datePublished">2020-10-31</time>
-  </a>
+<!-- 文章内容 -->
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Python/">Python</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/28/Git%20Push%E6%8A%A5%E9%94%99/" itemprop="url"></a>
-              
-              <h2 class="article-title">git push报错</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/28/Git%20Push%E6%8A%A5%E9%94%99/" class="article-date">
-    <time datetime="2020-10-27T18:06:38.856Z" itemprop="datePublished">2020-10-28</time>
-  </a>
+<div class="body-container">
+  <article class="content-container article-container">
+    <div class="article-content">
+      
+      
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Git/">Git</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/28/shell%E7%BC%96%E7%A8%8B/" itemprop="url"></a>
-              
-              <h2 class="article-title">shell编程</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/28/shell%E7%BC%96%E7%A8%8B/" class="article-date">
-    <time datetime="2020-10-27T17:48:11.747Z" itemprop="datePublished">2020-10-28</time>
-  </a>
+      <section class="article-entry">
+        <h2 id="一、冒泡排序"><a href="#一、冒泡排序" class="headerlink" title="一、冒泡排序"></a>一、冒泡排序</h2><p>基本原理：<br>1， 相邻的元素比较，如果前一个元素大于后一个元素，则交换位置<br>2， 一次遍历后，最大的元素会跑到最后<br>3， 第二次遍历就只需要比较前 len(arr) -i -1 个元素了，因为后面的原色都比前面的元素要大了</p>
+<p>时间复杂度为 O(n^2)<br>空间复杂度为 O(1)<br>因为并没有创建新的数组，是个稳定的算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">def bubble_sort(arr):</span><br><span class="line">    length &#x3D; len(arr)</span><br><span class="line">    for i in range(length - 1):</span><br><span class="line">        # 改进措施，如果一次循环完了之后没用进行交换，说明arr本身就有序，后续循环无需再做</span><br><span class="line">        swapped &#x3D; False</span><br><span class="line">        for j in range(length - i - 1):</span><br><span class="line">            # 比较相邻的两个元素</span><br><span class="line">            if arr[j] &gt; arr[j + 1]:</span><br><span class="line">                # 交换位置</span><br><span class="line">                arr[j], arr[j + 1] &#x3D; arr[j + 1], arr[j]</span><br><span class="line">                swapped &#x3D; True</span><br><span class="line">        if not swapped:</span><br><span class="line">            break</span><br><span class="line">    return arr</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    arr &#x3D; input(&#39;请输入要排序的数字，以逗号分割: &#39;).strip()</span><br><span class="line">    arr &#x3D; [int(item) for item in arr.split(&#39;,&#39;)]</span><br><span class="line">    print(*bubble_sort(arr), sep&#x3D;&#39;,&#39;)</span><br></pre></td></tr></table></figure>
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/shell/">shell</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/28/mangodb%E7%94%A8%E6%B3%95/" itemprop="url"></a>
-              
-              <h2 class="article-title">mangoDB指令笔记</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/28/mangodb%E7%94%A8%E6%B3%95/" class="article-date">
-    <time datetime="2020-10-27T17:44:59.873Z" itemprop="datePublished">2020-10-28</time>
-  </a>
+<h2 id="二、选择排序"><a href="#二、选择排序" class="headerlink" title="二、选择排序"></a>二、选择排序</h2><p>基本原理：<br>选择排序的思路是从剩余待排序的数组中选择最小的那个数和待排序的数做对比</p>
+<p>时间复杂度为 O(n^2)<br>空间复杂度为 O(1)<br>不稳定算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def select_sort(arr):</span><br><span class="line">    length &#x3D; len(arr)</span><br><span class="line">    for i in range(length - 1):</span><br><span class="line">        least &#x3D; i</span><br><span class="line">        for j in range(i+1, length):</span><br><span class="line">            if arr[j] &lt; arr[least]:</span><br><span class="line">                # 更新least</span><br><span class="line">                least &#x3D; j</span><br><span class="line">            # 交换位置</span><br><span class="line">            arr[least], arr[i] &#x3D; arr[i], arr[least]</span><br><span class="line">    return arr</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    arr &#x3D; input(&#39;请输入要排序的数字，以逗号分割: &#39;).strip()</span><br><span class="line">    arr &#x3D; [int(item) for item in arr.split(&#39;,&#39;)]</span><br><span class="line">    print(*select_sort(arr), sep&#x3D;&#39;,&#39;)</span><br></pre></td></tr></table></figure>
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/mangoDB/">mangoDB</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/28/mysql%E6%8C%87%E4%BB%A4/" itemprop="url"></a>
-              
-              <h2 class="article-title">MySQL指令笔记</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/28/mysql%E6%8C%87%E4%BB%A4/" class="article-date">
-    <time datetime="2020-10-27T17:20:15.826Z" itemprop="datePublished">2020-10-28</time>
-  </a>
+<h2 id="三、插入排序"><a href="#三、插入排序" class="headerlink" title="三、插入排序"></a>三、插入排序</h2><p>基本原理：<br>第一个当成已经排好序，依次从剩余数组中取出待排序的数字，和前面已经排好序的数字做对比，如果错位了，就交换位置</p>
+<p>时间复杂度为 O(n^2)<br>空间复杂度为 O(1)<br>稳定算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">def insertion_sort(arr):</span><br><span class="line">    for loop_index in range(1, len(arr)):</span><br><span class="line">        insertion_index &#x3D; loop_index</span><br><span class="line">        while insertion_index &gt; 0 and arr[insertion_index - 1] &gt; arr[insertion_index]:</span><br><span class="line">            # 交换位置</span><br><span class="line">            arr[insertion_index - 1], arr[insertion_index] &#x3D; arr[insertion_index], arr[insertion_index - 1]</span><br><span class="line">            # 继续往前循环</span><br><span class="line">            insertion_index -&#x3D; 1</span><br><span class="line">    return arr</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    arr &#x3D; input(&#39;请输入要排序的数字，以逗号分割: &#39;).strip()</span><br><span class="line">    arr &#x3D; [int(item) for item in arr.split(&#39;,&#39;)]</span><br><span class="line">    print(*insertion_sort(arr), sep&#x3D;&#39;,&#39;)</span><br></pre></td></tr></table></figure>
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/28/Linux%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/" itemprop="url"></a>
-              
-              <h2 class="article-title">Linux指令笔记</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/28/Linux%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/" class="article-date">
-    <time datetime="2020-10-27T16:12:25.823Z" itemprop="datePublished">2020-10-28</time>
-  </a>
+<h2 id="四、快速排序"><a href="#四、快速排序" class="headerlink" title="四、快速排序"></a>四、快速排序</h2><p>基本原理：<br>基本的思想是利用递归的思想，一开始选择一个基准值，大于这个基准值的数存放到一个列表中，<br>其他的值存放到另一个列表中，然后这两个列表进行递归操作</p>
+<p>时间复杂度为 O(nlog2n)<br>空间复杂度为 O(nlog2n)<br>不稳定算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def quick_sort(arr):</span><br><span class="line">    # 递归退出的条件</span><br><span class="line">    length &#x3D; len(arr)</span><br><span class="line">    if length &lt;&#x3D; 1:</span><br><span class="line">        return arr</span><br><span class="line">    else:</span><br><span class="line">        # 可以选第一个元素作为基准值，也可以选最后一个</span><br><span class="line">        pivot &#x3D; arr.pop()</span><br><span class="line">        greater, lesser &#x3D; [], []</span><br><span class="line">        for element in arr:</span><br><span class="line">            if element &gt; pivot:</span><br><span class="line">                greater.append(element)</span><br><span class="line">            else:</span><br><span class="line">                lesser.append(element)</span><br><span class="line">        return quick_sort(lesser) + [pivot] + quick_sort(greater)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    arr &#x3D; input(&#39;请输入要排序的数字，以逗号分割: &#39;).strip()</span><br><span class="line">    arr &#x3D; [int(item) for item in arr.split(&#39;,&#39;)]</span><br><span class="line">    print(*quick_sort(arr), sep&#x3D;&#39;,&#39;)</span><br></pre></td></tr></table></figure>
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Linux/">Linux</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/24/hello-world/" itemprop="url"></a>
-              
-              <h2 class="article-title">Hello World</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/24/hello-world/" class="article-date">
-    <time datetime="2020-10-24T10:57:29.788Z" itemprop="datePublished">2020-10-24</time>
-  </a>
 
-              </div>
-              <div class="article-category">
-                
-              </div>
-            </article>
-          </div>
+    <figure class="bookmark-card">
+      <a class="bookmark-container" target="_blank" title="更多请参考" href="https://www.cnblogs.com/onepixel/articles/7674659.html">
+        <div class="bookmark-content">
+          <div class="bookmark-name">更多请参考</div>
+          <div class="bookmark-link">https://www.cnblogs.com/onepixel/articles/7674659.html</div>
+        </div>
         
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/22/scrapy/" itemprop="url"></a>
-              
-              <h2 class="article-title">Scrapy的安装与使用</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/22/scrapy/" class="article-date">
-    <time datetime="2020-10-22T07:41:43.958Z" itemprop="datePublished">2020-10-22</time>
-  </a>
-
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Scrapy/">Scrapy</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/22/WGET%20%20CURL%E6%8C%87%E4%BB%A4/" itemprop="url"></a>
-              
-              <h2 class="article-title">WGET与CURL指令</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/22/WGET%20%20CURL%E6%8C%87%E4%BB%A4/" class="article-date">
-    <time datetime="2020-10-22T07:40:51.577Z" itemprop="datePublished">2020-10-22</time>
-  </a>
-
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Python/">Python</a>
-              </div>
-            </article>
-          </div>
-        
-          
-          <div class="card-item">
-            <article>
-              
-              
-                <a class="article-link card-link" href="/2020/10/19/%E5%85%B3%E4%BA%8EXPATH/" itemprop="url"></a>
-              
-              <h2 class="article-title">关于XPATH</h2>
-              <div class="article-meta">
-                <strong>xCrayon</strong>
-                <span>发布于</span>
-                
-  <a href="/2020/10/19/%E5%85%B3%E4%BA%8EXPATH/" class="article-date">
-    <time datetime="2020-10-19T14:17:44.168Z" itemprop="datePublished">2020-10-19</time>
-  </a>
-
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/Python/">Python</a>
-              </div>
-            </article>
-          </div>
-        
+      <div class="bookmark-cover">
+        <img src="http://www.dmoe.cc/random.php" alt="更多请参考" />
       </div>
-    </div>
+    
+      </a>
+    </figure>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/" rel="tag">#Algorithm</a></li></ul>
+      </section>
+
+      <section class="article-navs">
+        
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+    
+      <div id="article-nav-older" class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/10/31/%E5%8E%BB%E5%93%AA%E5%84%BF%E7%BD%91%E7%9A%842%E4%B8%AA%E5%8F%8D%E7%88%AC%E7%82%B9/"></a>
+          <strong class="article-nav-caption">Older</strong>
+          <p class="article-nav-title">
+            
+              去哪儿网的2个反爬点
+            
+          </p>
+        </article>
+      </div>
+    
   </div>
+</nav>
+
+      </section>
+
+      
+
+  
+  
+
+  
+  
+
+
+    </div>
+  </article>
 </div>
-
-<!-- page container -->
-
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
